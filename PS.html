@@ -1,0 +1,495 @@
+<html>
+<head>
+<script type="text/javascript">
+var i=0;
+var j=0;
+var r1=0;
+var d1=0;
+var t1=0;
+var l1=0;
+var db1=0;
+var lb1=0;
+var tb1=0;
+var rb1=0;
+var yellow2=5;
+var check=0;
+
+function init6(){
+	if(yellow2==5){
+		document.getElementById('yellow1').style.top='0px';
+		document.getElementById('blue1').style.left='110px';
+		document.getElementById('red1').style.left='0px';
+		document.getElementById('green1').style.top='110px';
+	}
+
+	else if(yellow2==8){
+		document.getElementById('yellow1').style.left='0px';
+		document.getElementById('blue1').style.top='0px';
+		document.getElementById('green1').style.left='110px';
+		document.getElementById('red1').style.top='110px';
+	}	
+	else if(yellow2==7){
+		document.getElementById('yellow1').style.top='110px';
+		document.getElementById('blue1').style.left='0px';
+		document.getElementById('red1').style.left='110px';
+		document.getElementById('green1').style.top='0px';
+	}
+	else if(yellow2==6){
+		document.getElementById('yellow1').style.left='110px';
+		document.getElementById('blue1').style.top='110px';
+		document.getElementById('red1').style.top='0px';
+		document.getElementById('green1').style.left='0px';
+	}
+	six();
+	rb1=0;
+	db1=0;
+	lb1=0;
+	tb1=0;
+}
+
+function six(){
+	if(yellow2==5){
+		db();
+		yellow2=8;
+	}
+	else if(yellow2==8){
+		rb();
+		yellow2=7;
+	}
+	else if(yellow2==7){
+		tb();
+		yellow2=6;
+
+	}
+	else if(yellow2==6)
+	{
+		lb();
+		yellow2=5;
+	}
+}
+
+function db(){
+	if(db1<110){
+		db1=db1+1;
+		document.getElementById('yellow1').style.top=(parseInt(document.getElementById('yellow1').style.top)+1)+'px';
+		document.getElementById('green1').style.top=(parseInt(document.getElementById('green1').style.top)-1)+'px';
+		document.getElementById('blue1').style.left=(parseInt(document.getElementById('blue1').style.left)-1)+'px';
+		document.getElementById('red1').style.left=(parseInt(document.getElementById('red1').style.left)+1)+'px';
+		setTimeout(db,2);
+	}
+}
+
+function rb(){
+	if(rb1<110){
+		rb1=rb1+1;
+		document.getElementById('yellow1').style.left=(parseInt(document.getElementById('yellow1').style.left)+1)+'px';
+		document.getElementById('green1').style.left=(parseInt(document.getElementById('green1').style.left)-1)+'px';
+		document.getElementById('blue1').style.top=(parseInt(document.getElementById('blue1').style.top)+1)+'px';
+		document.getElementById('red1').style.top=(parseInt(document.getElementById('red1').style.top)-1)+'px';
+		setTimeout(rb,2);
+	}
+}
+
+function lb(){
+	if(lb1<110){
+		lb1=lb1+1;
+		document.getElementById('yellow1').style.left=(parseInt(document.getElementById('yellow1').style.left)-1)+'px';
+		document.getElementById('green1').style.left=(parseInt(document.getElementById('green1').style.left)+1)+'px';
+		document.getElementById('blue1').style.top=(parseInt(document.getElementById('blue1').style.top)-1)+'px';
+		document.getElementById('red1').style.top=(parseInt(document.getElementById('red1').style.top)+1)+'px';
+		setTimeout(lb,2);
+	}
+}
+
+function tb(){
+	if(tb1<110){
+		tb1=tb1+1;
+		document.getElementById('yellow1').style.top=(parseInt(document.getElementById('yellow1').style.top)-1)+'px';
+		document.getElementById('green1').style.top=(parseInt(document.getElementById('green1').style.top)+1)+'px';
+		document.getElementById('blue1').style.left=(parseInt(document.getElementById('blue1').style.left)+1)+'px';
+		document.getElementById('red1').style.left=(parseInt(document.getElementById('red1').style.left)-1)+'px';
+		setTimeout(tb,2);
+	}
+}
+
+
+function init5(){
+	if(yellow2==5){
+		document.getElementById('yellow1').style.left='0px';
+		document.getElementById('blue1').style.top='0px';
+		document.getElementById('red1').style.top='110px';
+		document.getElementById('green1').style.left='110px';
+	}
+	else if(yellow2==6){
+		document.getElementById('yellow1').style.top='0px';
+		document.getElementById('blue1').style.left='110px';
+		document.getElementById('green1').style.top='110px';
+		document.getElementById('red1').style.left='0px';
+	}
+	else if(yellow2==7){
+		document.getElementById('yellow1').style.left='110px';
+		document.getElementById('blue1').style.top='110px';
+		document.getElementById('red1').style.top='0px';
+		document.getElementById('green1').style.left='0px';
+	}
+	else if(yellow2==8){
+		document.getElementById('yellow1').style.top='110px';
+		document.getElementById('blue1').style.left='0px';
+		document.getElementById('red1').style.left='110px';
+		document.getElementById('green1').style.top='0px';
+	}
+	five();
+	d1=0;
+	r1=0;
+	l1=0;
+	t1=0;
+}
+
+function r(){
+	if(r1<110){
+		r1=r1+1;
+		document.getElementById('yellow1').style.left=(parseInt(document.getElementById('yellow1').style.left)+1)+'px';
+		document.getElementById('green1').style.left=(parseInt(document.getElementById('green1').style.left)-1)+'px';
+		document.getElementById('blue1').style.top=(parseInt(document.getElementById('blue1').style.top)+1)+'px';
+		document.getElementById('red1').style.top=(parseInt(document.getElementById('red1').style.top)-1)+'px';
+		setTimeout(r,2);
+	}
+}
+
+function t(){
+	if(t1<110){
+		t1=t1+1;
+		document.getElementById('yellow1').style.top=(parseInt(document.getElementById('yellow1').style.top)-1)+'px';
+		document.getElementById('green1').style.top=(parseInt(document.getElementById('green1').style.top)+1)+'px';
+		document.getElementById('blue1').style.left=(parseInt(document.getElementById('blue1').style.left)+1)+'px';
+		document.getElementById('red1').style.left=(parseInt(document.getElementById('red1').style.left)-1)+'px';
+		setTimeout(t,2);
+	}
+}
+
+function l(){
+	if(l1<110){
+		l1=l1+1;
+		document.getElementById('yellow1').style.left=(parseInt(document.getElementById('yellow1').style.left)-1)+'px';
+		document.getElementById('red1').style.top=(parseInt(document.getElementById('red1').style.top)+1)+'px';
+		document.getElementById('blue1').style.top=(parseInt(document.getElementById('blue1').style.top)-1)+'px';
+		document.getElementById('green1').style.left=(parseInt(document.getElementById('green1').style.left)+1)+'px';
+		setTimeout(l,2);
+	}
+}
+
+function d(){
+	if(d1<110){
+		d1=d1+1;
+		document.getElementById('yellow1').style.top=(parseInt(document.getElementById('yellow1').style.top)+1)+'px';
+		document.getElementById('green1').style.top=(parseInt(document.getElementById('green1').style.top)-1)+'px';
+		document.getElementById('red1').style.left=(parseInt(document.getElementById('red1').style.left)+1)+'px';
+		document.getElementById('blue1').style.left=(parseInt(document.getElementById('blue1').style.left)-1)+'px';
+		setTimeout(d,2);
+	}
+}
+
+function five(){
+	if(yellow2==5){
+		r();
+		yellow2=6;
+	}
+	else if(yellow2==6){
+		d();
+		yellow2=7;
+	}
+	else if(yellow2==7){
+		l();
+		yellow2=8;
+	}
+	else if(yellow2==8){
+		t();
+		yellow2=5;
+	}
+}
+
+function doMove(){
+	if(j<400){
+		j=j+1;
+		foo1.style.left = (parseInt(foo1.style.left)-1)+'px';
+		foo.style.left = (parseInt(foo.style.left)+1)+'px';
+		setTimeout(doMove,2); // call doMove in 2msec
+	}
+}
+
+function init() {
+	foo = document.getElementById('back');
+	foo1 = document.getElementById('whitesquare'); // get the "foo" object
+  	foo.style.left = '100px';
+  	foo1.style.left='500px'; // set its initial position to 0px
+  	doMove(); // start animating
+  	check=1;
+}
+
+function init1() {
+  	foo2 = document.getElementById('back');
+  	foo3 = document.getElementById('whitesquare'); // get the "foo" object
+  	foo3.style.left = '100px';
+  	foo2.style.left='500px'; // set its initial position to 0px
+  	doMove1(); // start animating
+}
+
+function doMove1() {
+
+	if(i<400){
+		i=i+1;
+		foo2.style.left= (parseInt(foo2.style.left)-1)+'px';
+		foo3.style.left = (parseInt(foo3.style.left)+1)+'px';
+		setTimeout(doMove1,2); // call doMove in 20msec
+		}	
+	
+}
+function Changecolorred(){
+	document.getElementById("back").style.backgroundColor="#FF0000";
+}
+
+function Changecolorblue(){
+	document.getElementById("back").style.backgroundColor="#0000FF";
+}
+
+function Changecolorgreen(){
+	document.getElementById("back").style.backgroundColor="#008000";
+}
+
+function Swapforward(){
+	//yellow
+	if(document.getElementById("yellow1").style.backgroundColor=="rgb(255, 255, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#ff0000";//red
+		document.getElementById("blue1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("green1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("red1").style.backgroundColor="#008000";//green
+	}
+	//blue
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(0, 0, 255)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("blue1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("green1").style.backgroundColor="#008000";//green
+		document.getElementById("red1").style.backgroundColor="#ff0000";//red
+		
+	}
+	//green
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(0, 128, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("blue1").style.backgroundColor="#008000";//green
+		document.getElementById("green1").style.backgroundColor="#ff0000";//red
+		document.getElementById("red1").style.backgroundColor="#ffff00";//yellow
+		
+	}
+	//red
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(255, 0, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#008000";//green
+		document.getElementById("blue1").style.backgroundColor="#ff0000";//red
+		document.getElementById("green1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("red1").style.backgroundColor="#0000ff";//blue
+	}
+}
+function Swapbackward(){
+	//yellow
+	if(document.getElementById("yellow1").style.backgroundColor=="rgb(255, 255, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("blue1").style.backgroundColor="#008000";//green
+		document.getElementById("green1").style.backgroundColor="#ff0000";//red
+		document.getElementById("red1").style.backgroundColor="#ffff00";//yellow
+	}
+	//blue
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(0, 0, 255)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#008000";//green
+		document.getElementById("blue1").style.backgroundColor="#ff0000";//red
+		document.getElementById("green1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("red1").style.backgroundColor="#0000ff";//blue
+		
+	}
+	//green
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(0, 128, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#ff0000";//red
+		document.getElementById("blue1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("green1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("red1").style.backgroundColor="#008000";//green
+		
+	}
+	//red
+	else if(document.getElementById("yellow1").style.backgroundColor==="rgb(255, 0, 0)"){
+	
+		document.getElementById("yellow1").style.backgroundColor="#ffff00";//yellow
+		document.getElementById("blue1").style.backgroundColor="#0000ff";//blue
+		document.getElementById("green1").style.backgroundColor="#008000";//green
+		document.getElementById("red1").style.backgroundColor="#ff0000";//red
+	}
+}
+function Right(){
+	if(j!=400)
+	{
+		init();
+		i=0;
+	}
+}
+
+function Left(){
+if(check){
+	if(i!=400)
+	{
+		init1();
+		j=0;
+	}
+}
+}
+function Cycleforward()
+{init5();
+
+}
+function Cyclebackward()
+{init6();
+
+}
+document.onkeydown=function(e){
+if(e.which==82){
+Changecolorred();
+}
+if(e.which==66){
+Changecolorblue();
+}
+if(e.which==71){
+Changecolorgreen();
+}
+if(e.which==54 || e.which==102){
+Cycleforward();
+}
+if(e.which==100 || e.which==52){
+Cyclebackward();
+}
+if(e.which==97 || e.which==49){
+Swapbackward();
+}
+if(e.which==51|| e.which==99){
+Swapforward();
+}
+if(e.which==55 || e.which==103){
+Left();
+}
+if(e.which==57 || e.which==105){
+Right();
+}
+}
+
+</script>
+</head>
+<body>
+<style>
+
+#back{
+position:absolute;
+width:200px;
+left:100px;
+display:inline-block;
+height:250px;
+background-color:#FF0000;
+}
+#redbutton{
+display:inline-block;
+}
+#greenbutton{
+display:inline-block;
+}
+#bluebutton{
+display:inline-block;
+}
+#yellow1{
+position:absolute;
+width:100px;
+height:100px;
+border-radius:10px;
+}
+#blue1{
+position:absolute;
+left:110px;
+top:0px;
+width:100px;
+height:100px;
+border-radius:10px;
+}
+#green1{
+position:absolute;
+width:100px;
+left:110px;
+top:110px;
+height:100px;
+border-radius:10px;
+}
+#red1{
+position:absolute;
+border-radius:10px;
+top:110px;
+display:inline-block;
+width:100px;
+height:100px;
+}
+
+#left{
+display:inline-block;
+}
+#right{
+display:inline-block;
+}
+#whitesquare{
+position:absolute;
+left:500px;
+}
+#whiteyb{
+width:10px;
+height:100px;
+display:inline-block;
+}
+</style>
+
+<div id="back" style="top:0px"> 
+	<div id="redbutton">
+	<button onClick="Changecolorred()" style="color:red"> R </button>
+	</div>
+	<div id="bluebutton">
+	<button onClick="Changecolorblue()" style="color:blue"> B </button>
+	</div>
+	<div id="greenbutton">
+	<button onClick="Changecolorgreen()" style="color:green"> G </button>
+	</div>
+	<div id="swapforward">
+	<button onClick="Swapforward()"> SWAP FORWARD</button>
+	</div>
+	<div id="swapbackward">
+	<button onClick="Swapbackward()"> SWAP BACKWARD</button>
+	</div>
+	<div id="cycleforward">
+	<button onClick="Cycleforward()"> CYCLE FORWARD</button>
+	</div>
+	<div id="cyclebackward">
+	<button onClick="Cyclebackward()"> CYCLE BACKWARD</button>
+	</div>
+	<div id="left">
+	<button onClick="Left()"> <img src="leftarrow.jpg"/></button>
+	</div>
+	<div id="right">
+	<button onClick="Right()"><img src="rightarrow.jpg"/></button>
+	</div>	
+</div>
+
+<div id="whitesquare">
+	<div id="yellow1" style="background-color:rgb(255, 255, 0);"></div>
+	<div id="whiteyb"></div>
+	<div id="blue1" style="background-color:rgb(0, 0, 255);"></div>
+	<div id="green1" style="background-color:rgb(0, 128, 0);"></div>
+	<div id="whiteyb"></div>
+	<div id="red1" style="background-color:rgb(255, 0, 0);"></div>
+</div>
+</body>
+</html>
